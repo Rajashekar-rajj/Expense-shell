@@ -18,6 +18,8 @@ if [ $? -ne 0 ]
 exit 1 
 fi
 
+echo "Script started executing at: $(date)" | tee -a $LOG_FILE
+
 VALIDATE() {
     if [ $1 -ne 0 ]
        then
@@ -27,7 +29,7 @@ VALIDATE() {
        echo -e "$2 is $G success $N" | tee -a $LOG_FILE
    fi
 
-   echo "Script started executing at: $(date)" | tee -a $LOG_FILE
+   
 }
 
 dnf module disable nodejs -y &>>$LOG_FILE
