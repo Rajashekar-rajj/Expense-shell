@@ -31,13 +31,13 @@ VALIDATE(){
 }
 
 dnf install nginx -y 
-VALIDATE $? "$G installing nginx  $N" &>>$LOG_FILE
+VALIDATE $? "installing nginx " &>>$LOG_FILE
 
 systemctl enable nginx
-VALIDATE $? "$G enabling nginx  $N" &>>$LOG_FILE
+VALIDATE $? "enabling nginx" &>>$LOG_FILE
 
 
 systemctl start nginx
-VALIDATE $? "$G starting nginx  $N" &>>$LOG_FILE
+VALIDATE $? "starting nginx" &>>$LOG_FILE
 
 
