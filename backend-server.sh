@@ -67,7 +67,7 @@ npm install &>>$LOG_FILE
 
 # load the data before running backend
 
-nf install mysql -y &>>$LOG_FILE
+dnf install mysql -y &>>$LOG_FILE
 VALIDATE $? "Installing MySQL Client"
 
 mysql -h mysql.rajashekar-devops.online -u root -pExpenseApp@1 -e < /app/schema/backend.sql &>>$LOG_FILE
