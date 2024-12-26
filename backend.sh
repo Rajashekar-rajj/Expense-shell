@@ -69,7 +69,7 @@ cp /home/ec2-user/expense-shell/backend.service /etc/systemd/system/backend.serv
 nf install mysql -y &>>$LOG_FILE
 VALIDATE $? "Installing MySQL Client"
 
-mysql -h mysql.rajashekar-devops.online -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE
+mysql -h mysql.rajashekar-devops.online -u root -pExpenseApp@1 -e < /app/schema/backend.sql &>>$LOG_FILE
 VALIDATE $? "Schema loading"
 
 systemctl daemon-reload &>>$LOG_FILE
