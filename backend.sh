@@ -28,8 +28,8 @@ VALIDATE() {
    fi
 }
 
-dnf install nodejs -y
-VALIDATE $? "Installe nodejs"
+dnf install nodejs -y &>>$LOG_FILE
+VALIDATE $? "Installing nodejs success"
         
 
         
