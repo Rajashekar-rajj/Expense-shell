@@ -20,10 +20,10 @@ exit 1
 VALIDATE() {
     if [ $1 -ne 0 ]
        then
-         echo -e "$R $2 is not success $N" | tee -a $LOG_FILE
+         echo -e "$2 is $R not success $N" | tee -a $LOG_FILE
          exit 1
      else
-       echo -e "$G $2 is success $N" | tee -a $LOG_FILE
+       echo -e "$2 is $G success $N" | tee -a $LOG_FILE
    fi
 }
 
