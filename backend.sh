@@ -28,7 +28,7 @@ VALIDATE() {
    fi
 }
 
-dnf list installed nodejs -y
+dnf install nodejs -y
 VALIDATE $? "Installe nodejs"
         
 
