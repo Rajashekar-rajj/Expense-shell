@@ -63,8 +63,6 @@ VALIDATE $? "Extracting backend application code"
 
 npm install &>>$LOG_FILE
 
- cp /home/ec2-user/Expense-shell/backend.service /etc/systemd/system/backend.service
-
 # load the data before running backend
 
 dnf install mysql -y &>>$LOG_FILE
