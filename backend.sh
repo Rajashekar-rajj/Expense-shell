@@ -16,6 +16,7 @@ if [ $? -ne 0 ]
   then
     echo -e "$R Please use the root access $N" | tee -a $LOG_FILE
 exit 1 
+fi
 
 VALIDATE() {
     if [ $1 -ne 0 ]
