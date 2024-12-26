@@ -1,8 +1,9 @@
 #!/bin/bash
 LOGS_FOLDER="/var/log/expense"
-SCRIPT_NAME= (echo $0 | cut -d "." -f1)
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 TIMESTAMP= $(date+%Y-%m-%d-%H-%M-%s)
 LOG_FILE= "$LOG_FILE/$SCRIPT_NAME-$TIMESTAMP.log"
+mkdir -p $LOGS_FOLDER
  
 USERID=$(id -u)
 R="\e[31m"
@@ -25,7 +26,7 @@ VALIDATE() {
    fi
 }
 
-dnf list installed nodejs
+dnf list installed nodejs -y
 VALIDATE $? "Installed nodejs"
         
 
